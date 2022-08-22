@@ -37,6 +37,10 @@ header .hero-text {
   width: 60%;
 }
 
+.banner-text {
+  font-size: 57px;
+}
+
 header p {
   margin: 30px 0;
 }
