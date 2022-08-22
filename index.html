@@ -63,7 +63,10 @@
                     <h2 class="card-title fw-bolder mb-3 text-white">
                       Lionel Messi
                     </h2>
-                    <button class="card-button btn btn-primary w-100 h-50 p-2">
+                    <button
+                      class="card-button btn btn-primary w-100 h-50 p-2"
+                      onclick="selectedPlayers(this)"
+                    >
                       Select
                     </button>
                   </div>
@@ -78,7 +81,10 @@
                     <h2 class="card-title fw-bolder mb-3 text-white">
                       Neymar Jr.
                     </h2>
-                    <button class="card-button btn btn-primary w-100 h-50 p-2">
+                    <button
+                      class="card-button btn btn-primary w-100 h-50 p-2"
+                      onclick="selectedPlayers(this)"
+                    >
                       Select
                     </button>
                   </div>
@@ -93,7 +99,10 @@
                     <h2 class="card-title fw-bolder mb-3 text-white">
                       Ronaldo
                     </h2>
-                    <button class="card-button btn btn-primary w-100 h-50 p-2">
+                    <button
+                      class="card-button btn btn-primary w-100 h-50 p-2"
+                      onclick="selectedPlayers(this)"
+                    >
                       Select
                     </button>
                   </div>
@@ -108,7 +117,10 @@
                     <h2 class="card-title fw-bolder mb-3 text-white">
                       Sergio Ramos
                     </h2>
-                    <button class="card-button btn btn-primary w-100 h-50 p-2">
+                    <button
+                      class="card-button btn btn-primary w-100 h-50 p-2"
+                      onclick="selectedPlayers(this)"
+                    >
                       Select
                     </button>
                   </div>
@@ -123,7 +135,10 @@
                     <h2 class="card-title fw-bolder mb-3 text-white">
                       Kylian Mbappe
                     </h2>
-                    <button class="card-button btn btn-primary w-100 h-50 p-2">
+                    <button
+                      class="card-button btn btn-primary w-100 h-50 p-2"
+                      onclick="selectedPlayers(this)"
+                    >
                       Select
                     </button>
                   </div>
@@ -138,7 +153,10 @@
                     <h2 class="card-title fw-bolder mb-3 text-white">
                       Renato Sanches
                     </h2>
-                    <button class="card-button btn btn-primary w-100 h-50 p-2">
+                    <button
+                      class="card-button btn btn-primary w-100 h-50 p-2"
+                      onclick="selectedPlayers(this)"
+                    >
                       Select
                     </button>
                   </div>
@@ -153,7 +171,10 @@
                     <h2 class="card-title fw-bolder mb-3 text-white">
                       Arjen Robben
                     </h2>
-                    <button class="card-button btn btn-primary w-100 h-50 p-2">
+                    <button
+                      class="card-button btn btn-primary w-100 h-50 p-2"
+                      onclick="selectedPlayers(this)"
+                    >
                       Select
                     </button>
                   </div>
@@ -168,7 +189,11 @@
                     <h2 class="card-title fw-bolder mb-3 text-white">
                       Harry Kane
                     </h2>
-                    <button class="card-button btn btn-primary w-100 h-50 p-2">
+                    <button
+                      id="button"
+                      class="card-button btn btn-primary w-100 h-50 p-2"
+                      onclick="selectedPlayers(this)"
+                    >
                       Select
                     </button>
                   </div>
@@ -183,7 +208,10 @@
                     <h2 class="card-title fw-bolder mb-3 text-white">
                       Mohamed Salah
                     </h2>
-                    <button class="card-button btn btn-primary w-100 h-50 p-2">
+                    <button
+                      class="card-button btn btn-primary w-100 h-50 p-2"
+                      onclick="selectedPlayers(this)"
+                    >
                       Select
                     </button>
                   </div>
@@ -191,8 +219,30 @@
               </div>
             </div>
             <div class="col-md-3">
-              <div class="selected-V w-100 bg-black mb-4">
-                <h2 class="pt-3 text-white">Selected-V</h2>
+              <div class="selected-V w-100 bg-black text-white mb-4">
+                <h2 class="py-3 text-white">Selected-V</h2>
+                <div class="overflow-auto">
+                  <table class="table w-100">
+                    <tbody id="players"></tbody>
+                  </table>
+                </div>
+                <div
+                  id="warning"
+                  class="toast align-items-center bg-danger"
+                  role="alert"
+                  aria-live="assertive"
+                  aria-atomic="true"
+                >
+                  <div class="d-flex">
+                    <div class="toast-body">You can only choose 5 players.</div>
+                    <button
+                      type="button"
+                      class="btn-close me-2 m-auto"
+                      data-bs-dismiss="toast"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                </div>
               </div>
               <div class="budget w-100 bg-black">
                 <h2 class="pt-2 text-white">Budget</h2>
@@ -202,11 +252,11 @@
                       <h5>Per Player</h5>
                     </div>
                     <div class="col-7">
-                      <input type="text" class="w-100 g-0 text-black" />
+                      <input id="per-player" type="text" class="w-100 g-0 text-black" />
                     </div>
                   </div>
                   <div class="my-2 p-2">
-                    <button class="card-button btn btn-primary w-100 h-50 p-2">
+                    <button id="btn-calculate" class="card-button btn btn-primary w-100 h-50 p-2">
                       Calculate
                     </button>
                   </div>
@@ -214,14 +264,14 @@
                     class="d-flex justify-content-between text-white fs-4 pt-4 px-1"
                   >
                     <h5>Player Expenses:</h5>
-                    <p>$<span>0</span></p>
+                    <p>$<span id="player-expenses">0</span></p>
                   </div>
                   <div class="row pt-3">
                     <div class="col-5 m-0 p-0 text-info fs-4">
                       <h5>Manager</h5>
                     </div>
                     <div class="col-7">
-                      <input type="text" class="w-100 g-0 text-black" />
+                      <input id="manager-salary" type="text" class="w-100 g-0 text-black" />
                     </div>
                   </div>
                   <div class="row">
@@ -229,11 +279,11 @@
                       <h5>Coach</h5>
                     </div>
                     <div class="col-7">
-                      <input type="text" class="w-100 g-0 text-black" />
+                      <input id="coach-salary" type="text" class="w-100 g-0 text-black" />
                     </div>
                   </div>
                   <div class="px-2 pt-3">
-                    <button class="card-button btn btn-primary w-100 h-50 p-2">
+                    <button id="btn-calculate-total" class="card-button btn btn-primary w-100 h-50 p-2">
                       Calculate Total
                     </button>
                   </div>
@@ -242,7 +292,7 @@
                     class="d-flex justify-content-between text-white fs-4 pt-4 px-1"
                   >
                     <h5>Total</h5>
-                    <p>$<span>0</span></p>
+                    <p>$<span id="total">0</span></p>
                   </div>
                 </div>
               </div>
