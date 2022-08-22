@@ -123,3 +123,28 @@ header img {
     background: transparent;
   }
 }
+
+/* Main section */
+main {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* Player section */
+.card img {
+  object-fit: cover;
+}
+.card-title {
+  font-family: Lato, sans-serif;
+}
+.card-button {
+  font-size: 30px;
+  font-weight: 700;
+}
+.selected-V {
+  height: 350px;
+}
+.budget {
+  height: max-content;
+}
