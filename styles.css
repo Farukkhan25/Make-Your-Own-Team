@@ -149,6 +149,15 @@ main {
 .selected-V {
   height: 350px;
 }
+#players td,
+th {
+  color: white;
+  font-weight: 600;
+  text-align: left;
+}
+#warning {
+  display: none;
+}
 .budget {
   height: max-content;
 }
@@ -159,7 +168,7 @@ footer {
   margin-top: 60px;
   text-align: center;
   color: rgba(255, 255, 255, 0.9);
-  background-color: var(--clr-secondary);
+  background-color: black;
 }
 
 footer hr {
@@ -192,7 +201,7 @@ footer ul li {
 }
 
 .footer-link:hover {
-  color: var(--clr-primary);
+  color: #6729a3;
   text-decoration: underline;
   text-underline-offset: 5px;
 }
@@ -230,6 +239,71 @@ footer ul.footer-icons {
 }
 
 .footer-icons a:hover {
-  background-color: var(--clr-primary);
-  border: 1px solid var(--clr-primary);
+  background-color: #6729a3;
+  border: 1px solid #6729a3;
+}
+
+/* Responsive for tablet */
+@media screen and (max-width: 992px) {
+  /* Header */
+  header {
+    width: 90%;
+    padding: 40px 0 0 5%;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  header p {
+    margin: 20px 0;
+  }
+
+  a.button-link {
+    padding: 10px 15px;
+  }
+
+  /* Main section */
+  main {
+    width: 100%;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+
+  /* Footer */
+  footer ul.footer-links {
+    row-gap: 30px;
+  }
+}
+
+/* Responsive for phone */
+@media screen and (max-width: 576px) {
+  /* Header */
+  header {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 0;
+    margin: 10px auto 0;
+  }
+
+  header .hero-text {
+    width: 80%;
+  }
+
+  header .hero-image {
+    width: 100%;
+    align-self: center;
+    margin-top: 40px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 60px 0 40px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+  }
 }
