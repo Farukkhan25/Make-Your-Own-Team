@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Lato, sans-serif;
+  color: black;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+/* Header */
+header {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 40px 0 0 10%;
+  background-color: black;
+  color: white;
+  margin: 40px auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+header .hero-text {
+  width: 60%;
+}
+
+header p {
+  margin: 30px 0;
+}
+
+a.button-link {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: #6729a3;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+header .fa-eye {
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+header .hero-image {
+  width: 40%;
+  min-height: 400px;
+  overflow: visible;
+  animation: banner 15s linear infinite;
+}
+
+.hero-image:hover {
+  animation-play-state: paused;
+  cursor: not-allowed;
+}
+
+header img {
+  width: 100%;
+}
+
+/* Header animation */
+@keyframes banner {
+  0% {
+    background: url("images/banners/neymar-banner.png");
+    background-repeat: no-repeat;
+    transform: scale(0.8);
+  }
+
+  32% {
+    background: url("images/banners/neymar-banner.png");
+    background-repeat: no-repeat;
+    transform: scale(1.2);
+  }
+
+  33% {
+    background: transparent;
+  }
+
+  34% {
+    background: url("images/banners/messi-banner.png");
+    background-repeat: no-repeat;
+    transform: scale(0.8);
+  }
+
+  67% {
+    background: url("images/banners/messi-banner.png");
+    background-repeat: no-repeat;
+    transform: scale(1.2);
+  }
+
+  68% {
+    background: transparent;
+  }
+
+  69% {
+    background: url("images/banners/ronaldo-banner.png");
+    background-repeat: no-repeat;
+    transform: scale(0.8);
+  }
+
+  99% {
+    background: url("images/banners/ronaldo-banner.png");
+    background-repeat: no-repeat;
+    transform: scale(1.2);
+  }
+
+  100% {
+    background: transparent;
+  }
+}
