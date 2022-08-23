@@ -8,7 +8,6 @@
 
 body {
   font-family: Lato, sans-serif;
-  color: black;
 }
 
 h1 {
@@ -143,8 +142,11 @@ main {
   font-family: Lato, sans-serif;
 }
 .card-button {
-  font-size: 30px;
-  font-weight: 700;
+  font-size: 25px !important;
+  font-weight: 550 !important;
+}
+.calculate-button {
+  background-color: #6729a3 !important;
 }
 .selected-V {
   height: 350px;

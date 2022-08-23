@@ -5,7 +5,8 @@ document
   .getElementById("btn-calculate")
     .addEventListener("click", function () {
         const perPlayerSalary = getInputFieldValueById("per-player");
-        const playerExpenses = perPlayerSalary * 5;
+        const selectedPlayerNumber = selectedArray.length;
+        const playerExpenses = perPlayerSalary * selectedPlayerNumber;
         setTextElementValueById("player-expenses", playerExpenses);
     });
   
